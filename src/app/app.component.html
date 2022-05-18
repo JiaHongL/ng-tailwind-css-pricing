@@ -1,5 +1,5 @@
-<div class="bg-[#E5E5E5]">
-  <div class="p-4 h-screen lg:p-8">
+<div class="bg-[#E5E5E5] relative lg:h-screen">
+  <div class="p-4 lg:p-8">
     <!-- header -->
     <div class="flex justify-between items-start lg:max-w-[1280px] mx-auto">
       <div>
@@ -11,6 +11,7 @@
       </div>
       <button
         class="bg-primary text-white py-2 px-4 rounded-sm tracking-widest ring-offset-2 ring-primary active:bg-primary-dark active:ring-4 duration-100"
+        (click)="showModal=true"
       >
         LOGIN
       </button>
@@ -152,5 +153,115 @@
         </button>
       </div>
     </div>
+
+
+    <div class="
+      absolute
+      top-0
+      left-0
+      right-0
+      w-full
+      h-full
+       bg-black/70
+      flex
+      justify-center
+      items-start
+      lg:items-center
+      duration-300
+      "
+      [class]="showModal ? '' : 'opacity-0 pointer-events-none'"
+    >
+      <div class="w-[90%] p-4 bg-white mt-[150px] rounded-lg lg:mt-0 lg:w-[500px]">
+
+        <p class="text-3xl my-4 font-medium text-center">LOGIN</p>
+
+        <div class="mb-8">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            class="
+              w-full
+              border-gray-300
+              border-2
+              h-[50px]
+              px-3
+              mt-1
+              rounded-lg
+              focus:border-primary
+              focus:ring-primary
+            "
+          />
+        </div>
+
+        <div class="mb-8">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            class="
+              w-full
+              border-gray-300
+              border-2
+              h-[50px]
+              px-3
+              mt-1
+              rounded-lg
+              focus:border-primary
+              focus:ring-primary
+            "
+          />
+        </div>
+
+        <div class="mb-8">
+          <label for="region">Region</label>
+          <select
+            name="region"
+            class="
+              w-full
+              border-gray-300 border-2
+              h-[50px]
+              px-3
+              mt-1
+              rounded-lg
+              focus:border-primary focus:ring-primary
+            "
+          >
+            <option value="TW">Taiwan</option>
+            <option value="SG">Singapore</option>
+          </select>
+        </div>
+
+        <div class="mb-8 flex items-center">
+          <input
+            type="checkbox"
+            name="checkbox"
+            class="
+              mr-1
+              text-primary
+              focus:ring-primary
+            "
+          >
+          <label for="checkbox">Remember my username</label>
+        </div>
+
+        <button
+          class="
+            w-full
+            bg-primary
+            py-3
+            text-lg text-white
+            tracking-wide
+            rounded-lg
+            mt-4
+          "
+          (click)="showModal=false"
+        >
+          login
+        </button>
+      </div>
+    </div>
+
+
   </div>
 </div>
