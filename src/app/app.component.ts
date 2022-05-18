@@ -9,6 +9,6 @@ export class AppComponent {
 
   title = 'ng-tailwind-css-pricing';
 
-  showModal = true;
+  showModal = false;
 
 }

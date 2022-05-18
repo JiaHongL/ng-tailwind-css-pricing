@@ -98,8 +98,12 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
-  }
+  },
+  "defaultProject": "ng-tailwind-css-pricing"
 }
